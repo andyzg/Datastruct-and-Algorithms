@@ -1,4 +1,8 @@
-
+/**
+ * Implementation of Quick Sort
+ * @author Andy
+ *
+ */
 public class QuickSort {
 
 	public static void main(String[] args)

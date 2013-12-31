@@ -1,4 +1,8 @@
-
+/**
+ * Implementation of Merge Sort
+ * @author Andy
+ *
+ */
 public class MergeSort {
 
 	public static void main(String[] args)

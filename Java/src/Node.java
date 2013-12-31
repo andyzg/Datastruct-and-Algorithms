@@ -1,4 +1,8 @@
-
+/**
+ * Node class used for data structures
+ * @author Andy
+ *
+ */
 public class Node {
 
 	int value;
