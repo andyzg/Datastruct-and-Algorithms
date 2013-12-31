@@ -5,7 +5,6 @@
  */
 public class BubbleSort {
 
-	
 	public static void main(String args[])
 	{
 		int list[] = {3,1,9,7,5,2,10};

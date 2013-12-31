@@ -39,6 +39,7 @@ public class InsertionSort {
 				temp = list[j];
 				list[j] = list[j-1];
 				list[j-1] = temp;
+				j--;
 			}
 		}
 		return;
