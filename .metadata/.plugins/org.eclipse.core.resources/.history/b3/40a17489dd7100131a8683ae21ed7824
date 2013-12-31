@@ -1,0 +1,11 @@
+import java.util.Random;
+
+public class Sorting_Tools {
+
+	Random rand = new Random();
+	
+	public int[] generateArray(int size, int max)
+	{
+		
+	}
+}

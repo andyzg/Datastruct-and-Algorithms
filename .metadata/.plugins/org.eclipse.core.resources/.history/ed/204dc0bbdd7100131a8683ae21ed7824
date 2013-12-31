@@ -1,0 +1,34 @@
+import java.util.Random;
+
+public class Sorting_Tools {
+
+	Random rand = new Random();
+	
+	/**
+	 * Get a random array filled with numbers
+	 * @param size
+	 * @param max
+	 * @return
+	 */
+	public int[] generateArray(int size, int max)
+	{
+		int list[] = new int[size];
+		
+		for (int i=0; i<size; i++)
+		{
+			list[i] = rand.nextInt(max)+1;
+		}
+		
+		return list;
+	}
+	
+	public void printArray(int []list)
+	{
+		for (int i=0; i<list.length; i++)
+		{
+			System.out.print(list[i]+"\t");
+		}
+		System.out.println();
+		return;
+	}
+}

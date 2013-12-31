@@ -1,0 +1,6 @@
+import java.util.Random;
+
+public class Sorting_Tools {
+
+	Random rand = new Random();
+}
