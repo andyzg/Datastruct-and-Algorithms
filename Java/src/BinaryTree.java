@@ -75,17 +75,51 @@ public class BinaryTree {
 		}
 	}
 	
+	private void addArray(int[] array)
+	{
+		for (int i=0; i<array.length; i++)
+			this.addNode(new TreeNode(array[i]));
+		return;
+	}
+	
+	private void printTree()
+	{
+		if (this.root == null)
+			return;
+		Queue queue = new Queue();
+		
+		queue.enqueue(new Node(this.root));
+		System.out.println(this.root.value);
+		
+		while (queue.first != null)
+		{
+			TreeNode n = queue.dequeue().treeNode;
+			
+			if (n.left != null)
+			{
+				queue.enqueue(new Node(n.left));
+				System.out.print(n.left.value+"\t");
+			}
+			if (n.right != null)
+			{
+				queue.enqueue(new Node(n.right));
+				System.out.print(n.right.value+"\t");
+			}
+		}
+	}
+	
 	public static void main(String[] args)
 	{
+		int[] values = {1,5,8,7,4,2,6,0,9,8,8,7,5,2};
 		BinaryTree bt = new BinaryTree();
 		
-		bt.addNode(new TreeNode(5));
-		bt.addNode(new TreeNode(2));
-		bt.addNode(new TreeNode(3));
-		bt.addNode(new TreeNode(8));
-		bt.addNode(new TreeNode(10));
+		bt.addArray(values);
 		
 		bt.traverse(bt.root);
 		bt.findNumber(10, bt.root);
-	}
+		
+		System.out.println();
+		
+		bt.printTree();
+	}	
 }

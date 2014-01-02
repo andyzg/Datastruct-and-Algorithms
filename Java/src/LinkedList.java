@@ -68,5 +68,9 @@ public class LinkedList {
 		
 		list.printList();
 		list.printIndex(4);
+		
+		list.deleteFirst();
+		
+		list.printList();
 	}
 }

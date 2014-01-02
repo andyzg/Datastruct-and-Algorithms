@@ -3,8 +3,10 @@ public class Queue {
 
 	Node first, last;
 	
-	private void enqueue(Node n)
+	void enqueue(Node n)
 	{
+		if (n == null)
+			return;
 		if (first == null)
 		{
 			first = n;
@@ -17,7 +19,7 @@ public class Queue {
 		}
 	}
 	
-	private Node dequeue()
+	Node dequeue()
 	{
 		if (first != null)
 		{
@@ -43,6 +45,7 @@ public class Queue {
 		}
 		return;
 	}
+	
 	
 	public static void main(String[] args)
 	{
