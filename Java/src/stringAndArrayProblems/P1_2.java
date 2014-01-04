@@ -11,6 +11,19 @@ package stringAndArrayProblems;
  */
 public class P1_2 {
 
+	/**
+	 * In order to reverse a string, all characters on the right 
+	 * of the nth character need to be on the left and and vice versa
+	 * for the left side. By repeatedly taking the first character and 
+	 * placing it on the left side of a temporary string, we invert its 
+	 * previous order. After placing it, we remove the first character of
+	 * the original string by taking the substring starting from the 
+	 * index 1.
+	 * 
+	 * Efficiency : O(n)
+	 * @param a
+	 * @return
+	 */
 	private static String run(String a)
 	{
 		String temp = "";

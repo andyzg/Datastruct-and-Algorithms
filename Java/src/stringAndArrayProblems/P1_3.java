@@ -9,6 +9,17 @@ package stringAndArrayProblems;
  */
 public class P1_3 {
 
+	/**
+	 * Since there is a memory limitation, this often has a negative impact
+	 * on the time efficiency. 
+	 * This algorithm reuses the same string by concatenating unique characters
+	 * to the end of the original string. Afterwards, it returns the substring
+	 * starting at the end of the original string.
+	 * 
+	 * Efficiency : O(n^2)
+	 * @param a
+	 * @return
+	 */
 	private static String run(String a)
 	{
 		int length = a.length();

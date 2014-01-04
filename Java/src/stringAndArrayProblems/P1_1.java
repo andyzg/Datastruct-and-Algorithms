@@ -12,30 +12,26 @@ import java.util.Hashtable;
  */
 public class P1_1 {
 
-	private static boolean run(String string)
-	{
-		Hashtable<Character, Boolean> ht = new Hashtable<Character, Boolean>();
-		
-		for (int i=0; i<string.length(); i++)
-		{
-			if (ht.containsKey(string.charAt(i)))
-			{
-				return false;
-			}
-			else
-			{
-				ht.put(string.charAt(i), true);
-			}
-		}
-		return true;
-	}
-	
+	/**
+	 * Since a char is 1 byte which is equal to 2^8 bits, it has a 
+	 * total of 256 possible values. By creating an array of 256, it 
+	 * can keep track of all characters that already exist by setting the 
+	 * index of the array as true depending on the ASCII value. 
+	 * If the index is already set as true, then we know the character already
+	 * appeared so therefore, it isn't unique. 
+	 * If it reaches to the end without interruption, then all characters
+	 * are unique` 
+	 * 
+	 * Efficiency : O(n) in speed
+	 * @param string
+	 * @return
+	 */
 	private static boolean run1(String string)
 	{
-		if (string.length() > 128)
+		if (string.length() > 256)
 			return false;
 		
-		boolean a[] = new boolean[128];
+		boolean a[] = new boolean[256];
 		Arrays.fill(a, false);
 		
 		for (int i=0; i<string.length(); i++)
@@ -55,14 +51,6 @@ public class P1_1 {
 		String c = "";
 		String d = "mm";
 		String e = "          ";
-		
-		System.out.println(run(a));
-		System.out.println(run(b));
-		System.out.println(run(c));
-		System.out.println(run(d));
-		System.out.println(run(e));
-		
-		System.out.println();
 		
 		System.out.println(run1(a));
 		System.out.println(run1(b));
