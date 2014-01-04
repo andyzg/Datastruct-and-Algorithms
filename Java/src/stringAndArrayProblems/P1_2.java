@@ -32,6 +32,4 @@ public class P1_2 {
 		System.out.println(run(b));
 		System.out.println(run(c));
 	}
-	
-	
 }
