@@ -1,3 +1,5 @@
+import java.util.Enumeration;
+
 /**
  * Implementation of a LinkedList with basic methods
  * @author Andy
